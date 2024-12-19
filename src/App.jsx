@@ -1,35 +1,44 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+
 import viteLogo from '/vite.svg'
 import './App.css'
+import DataGridBookings from './componants/DataGridDemo2'
+import FullFeaturedCrudGrid from './componants/DataGridDemo1'
 
+import FullFeaturedCrudGrid4 from './componants/DataGridDemo4'
+import VehicleGrid from './componants/DataGridDemo4'
+import ResponsiveAppBar from './componants/DemoAppBar'
+import DashboardLayoutBasic1 from './Demo2.jsx'
+import SignIn from './componants/SignIn.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Hello,Yashodeep Gaikwad</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      {/* <DataGridComponant></DataGridComponant> */}
+      {/* <FullFeaturedCrudGrid></FullFeaturedCrudGrid> */}
+      {/* <DataGridBookings></DataGridBookings> */}
+      {/* <VehicleGrid></VehicleGrid> */}
+      {/* <ResponsiveAppBar></ResponsiveAppBar> */}
+
+      {/* <div>
+        <DashboardLayoutBasic1></DashboardLayoutBasic1>
+      </div> */}
+      <Router>
+
+        <Routes>
+          <Route path="/adminapp" element={ <DashboardLayoutBasic1/>} />
+          {/* <Route path="/dashboard" element={ <DashboardLayoutBasic1/>} /> */}
+        </Routes>
+      </Router>
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
